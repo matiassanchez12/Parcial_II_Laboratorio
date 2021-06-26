@@ -1,0 +1,136 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+body{
+    background-color: rgb(111, 111, 231);
+}
+
+.main-container-form{
+  width: 100%;
+  display: none;
+  justify-content: center;
+  position: fixed;
+  align-content: center;
+}
+
+.container-form{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(164, 232, 198);
+    border: black 1px solid;
+    border-radius: 5px;
+    padding: 30px;
+    align-items: baseline;
+}
+
+.select-input{
+  width: 100px;
+  padding: 5px;
+}
+
+.form-input{
+    margin-bottom: 10px;
+}
+
+#btnEnviar{
+    background-color: rgb(48, 131, 255);
+    border-radius: 15px;
+    border-color: transparent;
+    color: white;
+    width: 10em;
+    height: 3em;
+    margin-top: 2em;
+    margin-right: 10px;
+  cursor: pointer;
+
+}
+
+#btnCerrar{
+  background-color: rgb(180, 49, 49);
+  border-radius: 15px;
+  border-color: transparent;
+  color: white;
+  width: 10em;
+  height: 3em;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+.btn-del{
+    background-color: rgb(204, 43, 43);
+    border-radius: 15px;
+    border-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.tabla-container {
+    padding: 10px 0 150px 0;
+    background-color: rgb(79, 121, 116);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  table {
+    border-collapse: unset;
+    border-spacing: 0;
+  }
+  
+  th,
+  td {
+    margin: 0;
+    padding: 10px 50px;
+  }
+  
+  thead {
+    background-color: blue;
+    color: white;
+    border-spacing: none;
+    border-collapse: inherit;
+  }
+  
+  table tbody tr:nth-child(1n) {
+    background-color: #ccc;
+  }
+  
+  table tbody tr:nth-child(2n) {
+    background-color: #777;
+  }
+  
+
+
+.btn-add {
+  display: block;
+  background-color: rgb(9, 52, 77);
+  border-radius: 15px;
+  border-color: transparent;
+  width: 10em;
+  height: 3em;
+  margin-top: 2em;
+  color: white;
+  cursor:pointer;
+  margin: 10px;
+
+ }
+
+
+.filtros-section{
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.enmarco{
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.248);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.234);
+}
+
+.separe{
+  margin-left: 15px;
+}

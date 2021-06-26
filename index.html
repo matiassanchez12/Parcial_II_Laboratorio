@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Practica II</title>
+    <script src="./js/main.js"></script>
+    <script src="./js/vehiculo.js"></script>
+    <script src="./js/manejadora.js"></script>
+    <script src="./js/auto.js"></script>
+    <script src="./js/camioneta.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main-container-form" id="form" hidden>
+        <div class="container-form">
+            <div  style="text-align: right !important; width: 100%;">
+                <button id="btnCerrarModal" style="color: black; font-size: 20px; font-weight: bold; cursor: pointer;">X</button>
+            </div>
+            <div style="text-align: left !important; width: 100%;">
+                <h3>Alta vehiculo</h3>
+            </div>
+            <div class="form-input" style="width: 100%;">
+                <label>Id</label>
+                <br>
+                <input type="text" name="id" id="id" style="width: 100%;" disabled>
+            </div>
+            <div class="form-input" style="width: 100%;">
+                <label>Marca</label>
+                <br>
+                <input type="text" name="marca" id="marca" value="asd"  style="width: 100%;">
+            </div>
+            <div class="form-input" style="width: 100%;">
+                <label>Modelo</label>
+                <br>
+                <input type="text" name="modelo" id="modelo" value="asd" style="width: 100%;">
+            </div>
+            <div class="form-input" style="width: 100%;">
+                <label>Precio</label>
+                <br>
+                <input type="text" name="precio" id="precio" value="22" style="width: 100%;">
+            </div>
+
+            <div class="form-input select-input" style="width: 100%;">
+                <label>Tipo</label>
+                <br>
+                <select name="tipo" id="tipo" class="select-input" style="width: 100%;">
+                    <option value="Camioneta">Camioneta</option>
+                    <option value="Auto" selected>Auto</option>
+                </select>
+            </div>
+
+            <div class="form-input" style="width: 100%;">
+                <label>Cantidad de puertas</label>
+                <br>
+                <input type="text" name="cant_puertas" value="2" id="cant_puertas" style="width: 100%;" disabled>
+            </div>
+            
+            <div class="form-input" style="width: 100%;">
+                <label>Seleccionar si 4 x 4 : </label>
+                <br>
+                <input type="checkbox" name="escuatro" id="escuatro" style="width: 100%;">
+            </div>
+
+            <div style="display: flex;justify-content: center;; width: 100%;">
+                <button type="submit" id="btnEnviar">Enviar</button>
+                <button type="button" id="btnCerrar">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabla-container">
+        <div style="display: flex; justify-content: flex-start; width: 100%;">
+            <button class="btn-add" id="btnModal">
+                + Alta
+            </button>
+        </div>
+        
+        <div class="filtros-section">
+            <h3 class="enmarco" style="text-align: center; font-size: larger;">Filtros</h3>
+            <div style="display:flex; justify-content: flex-start; width: 100%; ">
+                <div style="display: inline-flex; width: 33%; align-items: center;">
+                    <label>Filtrar por: </label>
+                    <br>
+                    <select id="filtro" class="select-input">
+                        <option value="Auto">Auto</option>
+                        <option value="Camioneta">Camioneta</option>
+                    </select>
+                </div>
+                <div style="width: 33%;">
+                    <span>Promedio de precio: </span>
+                    <input style="padding: 5px; width: 80px;" type="text">
+                </div>
+                <div>
+                    <button class="btn-mod" style="padding: 5px; background-color: rgb(52, 99, 228); color: white;">Calcular promedio</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="filtros-section">
+            <div style="display: inline-flex;  align-items: center;">
+                <h3 style="text-align: left; font-size: larger; margin-right: 10px;">Campos Mostrados </h3> 
+                <span> Tildar los campos a mostrar</span>
+            </div>
+            <div class="enmarco" style="display:flex; justify-content: flex-start; width: 100%; ">
+                <input class="separe" type="checkbox" name="check_id" id="check_id"> Id
+                <input class="separe" type="checkbox" name="check_marca" id="check_marca"> Marca
+                <input class="separe" type="checkbox" name="check_modelo" id="check_modelo"> Modelo
+                <input class="separe" type="checkbox" name="check_precio" id="check_precio"> Precio
+            </div>
+        </div>
+        <div style="width: 100%; text-align: center; border-bottom: 1px solid rgba(0, 0, 0, 0.248); margin-bottom: 15px;">
+            <h2>Lista de vehiculos</h2>
+        </div>
+
+        <table class="" id="maintabla">
+            <thead>
+                <th>Id</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Accion</th>
+            </thead>
+            <tbody id="bodytabla">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

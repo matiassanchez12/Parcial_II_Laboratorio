@@ -35,6 +35,7 @@ var Main = /** @class */ (function () {
             Main.mostrarModal();
         });
         this.btnCerrarModal.addEventListener('click', this.cerrarModal);
+        //Si se selecciona en el alta la opcion camioneta se activa para elegir si es 4 x 4, en auto la cantidad de puertas
         tipo.addEventListener('change', function (ev) {
             var resultado = ev.target;
             if (resultado.value == 'Auto') {
@@ -105,13 +106,7 @@ var Main = /** @class */ (function () {
         var form = document.getElementById("form");
         form.setAttribute('style', 'display:none');
     };
-    // public validarGenero() : string{
-    //     if (this.sexo1.checked === true) {
-    //       return this.sexo1.value;
-    //     } else {
-    //       return this.sexo2.value;
-    //     }
-    //   }
+    //Borrra la tabla y carga nuevamente los datos      
     Main.prototype.actualizarTabla = function (listado) {
         if (listado === void 0) { listado = null; }
         var tabla = document.getElementById("bodytabla");

@@ -40,6 +40,7 @@ class Main{
 
         this.btnCerrarModal.addEventListener('click', this.cerrarModal);
 
+        //Si se selecciona en el alta la opcion camioneta se activa para elegir si es 4 x 4, en auto la cantidad de puertas
         tipo.addEventListener('change', (ev : Event) => {
             let resultado: HTMLInputElement = <HTMLInputElement>ev.target;
             if(resultado.value == 'Auto'){
@@ -119,15 +120,8 @@ class Main{
         let form = <HTMLDivElement> document.getElementById("form");
         form.setAttribute('style', 'display:none');
     }
-      
-    // public validarGenero() : string{
-    //     if (this.sexo1.checked === true) {
-    //       return this.sexo1.value;
-    //     } else {
-    //       return this.sexo2.value;
-    //     }
-    //   }
 
+    //Borrra la tabla y carga nuevamente los datos      
     public actualizarTabla(listado : Array<JSON> = null) {
         let tabla : HTMLDivElement = <HTMLDivElement> document.getElementById("bodytabla");
 

@@ -55,17 +55,6 @@ class Manejadora {
         }
     }
 
-    // public filtrarPorPais(pais : string) {
-    //     let array = this.ObtenerCiudadanos();
-    //     let nuevoArray : Array<JSON> = [];    
-    //     array.forEach(persona => {
-    //         if(persona.Pais == pais){
-    //             nuevoArray.push(persona);
-    //         }
-    //     });
-    //     return nuevoArray;
-    // }
-
     public buscarId() {
         let vehiculos = this.ObteneVehiculos();
 

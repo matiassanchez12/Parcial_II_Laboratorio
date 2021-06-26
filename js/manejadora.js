@@ -47,16 +47,6 @@ var Manejadora = /** @class */ (function () {
             return listado.filter(function (dato) { return dato.cuatroXcuatro != null; });
         }
     };
-    // public filtrarPorPais(pais : string) {
-    //     let array = this.ObtenerCiudadanos();
-    //     let nuevoArray : Array<JSON> = [];    
-    //     array.forEach(persona => {
-    //         if(persona.Pais == pais){
-    //             nuevoArray.push(persona);
-    //         }
-    //     });
-    //     return nuevoArray;
-    // }
     Manejadora.prototype.buscarId = function () {
         var vehiculos = this.ObteneVehiculos();
         if (vehiculos.length != 0) {
